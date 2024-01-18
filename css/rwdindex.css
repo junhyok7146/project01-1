@@ -160,6 +160,10 @@
         height: 600px; /*원래는 높이를 잘 안주는데 글씨 양이 다른데 높이가 같아질 때 사용*/
         padding: 100px 30px;
     }
+    #section .slide img{
+        width: auto;
+        min-height: 372px;
+        }
 /*================================product 구역=====================================*/
     #section .product .text{
         float: left;
