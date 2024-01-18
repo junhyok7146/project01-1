@@ -1,0 +1,193 @@
+@media screen and (max-width: 1289px){
+    .row{
+        padding: 0 10px;
+    }
+}
+    /*@media 사이 사이 띄어쓰기 중요함*/
+@media screen and (max-width: 910px){
+
+    #header{
+        background-color: rgba(255,255,255,1);
+        /* background-color: #000; opacity: 0.47; */
+        position: static; /*static이 들어가면 top left z-index 의미가 없어짐*/
+        top: 0; 
+        left: 0; 
+        width: 100%;
+        z-index: 99; /*박스끼리 겹칠 때 우선 순위를 정하는 속성 숫자가 높을 수록 위에 있음*/
+    }
+    #header .row{
+        padding: 0;
+    }
+    #header h1{
+        float: left;
+        padding: 20px 0 20px 10px;
+    }
+    #header h1 a{
+        width:226px;
+        height: 39px;
+        display: block;
+        background: url(../img/워드프레스\ 기업홈페이지1\ 로고\ \(1\).png);
+        background-size: contain; /*사진이 잘리지 않게 하는 속성*/
+        background-repeat: no-repeat;
+    }
+    #header .menuopen{
+        display: block;
+        float: right;
+        font-size: 25px;
+        height: 90px;
+        line-height: 90px;
+        margin-right: 10px;
+    }
+    #header #nav{
+        float: right;
+        display: none; /*자바 스크립트 액션으로 표시/감춤 기능을 활성화 함*/
+        width: 100%; /*쓰는 순간 독립적인 공간이 되어버려서float과 display가 들어감 */
+    }
+    /* #header #nav .depth1{
+        background-color: pink;
+    } */
+    #header #nav .depth1 > li {
+        float: none; 
+        margin-left: 0px; 
+        color: #4a4e57; 
+        font-family: Noto Sans KR;
+        font-size: 12px;
+        transition: all 0.2s;
+        position: relative;
+        border-top: 0px solid #4a4e57;
+    }
+    #header #nav .depth1 > li > a {
+        /*a tag는 block 속성이 있어야 높이를 설정 가능하므로 block코드를 넣어줘야함*/
+        /*a하나뿐일 땐 block만 적어도 됨*/
+        display: block;
+        height: auto;
+        line-height: 41px;
+        border-top: 1px solid #d4d4d4;
+        padding-left: 40px;
+    }
+    #header #nav .depth1 > li:hover {
+        color: #4a4e57; 
+        border-top: 0px solid #4a4e57;
+    }
+    #header #nav .depth1 > li > a:hover {
+        background: #f9f9fb;
+    }
+    #header #nav .depth1 >li:hover .depth2{
+        display: block;
+        /*depth2의 원래 성격은 block 성격인데 display:block을 써줌으로써 안보이게 되는 것*/
+    }
+    #header #nav .depth2{
+        position: static;/*부모 안으로 들어온 것*/
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        color: #212934;
+        display: block;
+        border-top: 0px solid #45639d;
+    }
+    #header #nav .depth2 > li > a{
+        padding: 12px 20px 12px 50px;
+        display: block;
+        /*block은 성격이고 inline은 넓이를 줄 수 있는데 넓이가
+         글자만큼만 잡힘 이럴땐 inline-block이 아니라 block을 줘야함*/
+        font-size: 12px;
+        color: #212934;
+        border-top: 1px solid #d4d4d4;
+    }
+    #header #nav .depth2 > li > a:hover{
+        background: #f9f9fb;
+    }
+/*=========================슬라이드 텍스트=============================================*/
+    
+    #section .slide .text{
+        /*자식 박스를 부모박스 정중앙에 배치 시키는 공식*/
+        position: absolute;
+            /* absolute는 부모에게 붙는 것 */
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        /*자식 박스를 부모박스 정중앙에 배치 시키는 공식*/
+        
+        width: 100%; /*자식의 글씨 크기가 커서 두줄로 되면 이 속성을 추가함*/
+
+        color: #fff;
+
+        text-align: center;
+
+    }
+    #section .slide .text h2{
+        font-size: 40px;
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    #section .slide .text p{
+        display: none;
+    }
+    #section .slide .text a{
+        display: inline-block;
+        font-size: 16px;
+        color: #58aedd;
+        background-color: #fff;
+        padding: 10px 20px;
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+        margin-top: 20px;
+        
+        border-radius: 50px;
+        /*px은 모서리가 둥글어지고 %는 전체가 둥글어짐*/
+    }
+    #section .SlideOuter .SlideInner ul.slick-dots{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        /*디폴트 값이 가로축이라서 하나만 쓰면 가로만 -50%*/
+        bottom: 20px   
+    }
+    #section .SlideOuter .plapau{
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        font-size: 20px;
+        color: #fff;
+        margin-left: 60px ;
+    }
+    #section .business ul li{
+        float: left;
+        width: 100%;
+        text-align: center;
+        height: 600px; /*원래는 높이를 잘 안주는데 글씨 양이 다른데 높이가 같아질 때 사용*/
+        padding: 100px 30px;
+    }
+/*================================product 구역=====================================*/
+    #section .product .text{
+        float: left;
+        width: 100%;
+        color: #fff;
+    }
+    #section .product .text h2{
+        font-size: 50px;
+    }
+    #section .product .photo{
+        float: left;
+        width: 100%;
+        text-align: center;
+        padding-top: 70px;
+    }
+/*================================customer 구역=====================================*/
+    #section .customer .row div span{
+        width: 100%;
+        float: left;
+        padding: 0px 15px;
+        text-align: center;
+        margin: 10px;
+    }
+    #section .customer .row h2{
+        font-size: 40px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+}
